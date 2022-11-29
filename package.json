@@ -1,0 +1,17 @@
+{
+  "name": "meteor-oplogconverter-issue",
+  "private": true,
+  "scripts": {
+    "start": "MONGO_URL=mongodb://localhost:27017,localhost:27018,localhost:27019/docs?replicaSet=replset MONGO_OPLOG_URL=mongodb://localhost:27017,localhost:27018,localhost:27019/local?replicaSet=replset meteor --port 3002 --exclude-archs web.browser.legacy"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.17.9",
+    "meteor-node-stubs": "^1.2.1"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.js",
+      "server": "server/main.js"
+    }
+  }
+}
